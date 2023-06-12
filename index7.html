@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   
+<body>
+    <!-- burda sehvlik var  -->
+    <script>
+        var nums = [1,3,5,6];
+        var target = 7;
+        var searchInsert = function (nums, target) {
+            let start = 0;
+            let end = nums.length;
+
+            while(start <= end){
+                let mid = start + (end-start)/2; 
+                if(nums[mid]===target){
+                    return mid;
+                }else if(nums[mid] < target){
+                    return start = mid + 1; 
+                }else{
+                    return end = mid -1;
+                } 
+            }
+            return start;
+        };
+        console.log(searchInsert(nums, target))
+    </script>
+</body>
+
+</html>
